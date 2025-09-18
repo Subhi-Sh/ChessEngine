@@ -1,0 +1,16 @@
+@import "tailwindcss";
+/* Fix react-chessboard layout under Tailwind */
+.chessboard-b72ad {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.chessboard-b72ad > div {
+  position: absolute !important;
+  inset: 0; /* stretch each layer */
+}
+
+@layer base {
+  .chessboard-b72ad { position: relative !important; width: 100% !important; height: 100% !important; }
+  .chessboard-b72ad > div { position: absolute !important; }  /* REMOVE: inset: 0 */
+}
